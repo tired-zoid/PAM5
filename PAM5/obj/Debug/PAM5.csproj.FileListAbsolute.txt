@@ -1,0 +1,9 @@
+C:\Users\rahim\source\repos\PAM5\PAM5\bin\Debug\PAM5.exe.config
+C:\Users\rahim\source\repos\PAM5\PAM5\bin\Debug\PAM5.exe
+C:\Users\rahim\source\repos\PAM5\PAM5\bin\Debug\PAM5.pdb
+C:\Users\rahim\source\repos\PAM5\PAM5\obj\Debug\PAM5.csprojAssemblyReference.cache
+C:\Users\rahim\source\repos\PAM5\PAM5\obj\Debug\PAM5.Form1.resources
+C:\Users\rahim\source\repos\PAM5\PAM5\obj\Debug\PAM5.Properties.Resources.resources
+C:\Users\rahim\source\repos\PAM5\PAM5\obj\Debug\PAM5.csproj.GenerateResource.cache
+C:\Users\rahim\source\repos\PAM5\PAM5\obj\Debug\PAM5.exe
+C:\Users\rahim\source\repos\PAM5\PAM5\obj\Debug\PAM5.pdb

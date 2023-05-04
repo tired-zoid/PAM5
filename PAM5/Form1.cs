@@ -33,7 +33,7 @@ namespace PAM5
 
             int k = 0;
             int i;
-            for (i = 0; i < code.Length - 1; i = i + 2)
+            for (i = 0; i < code.Length - 1; i += 2)
             {
                 string S1 = code.Substring(i, 2);
                 SS[k++] = S1;
@@ -50,14 +50,22 @@ namespace PAM5
 
             for (i = 0; i < SS.GetLength(0); i++) // кодирование входного сигнала 
             {
-                if (SS[i] == "00")
-                    SS[i] = "-2";
-                if (SS[i] == "01")
-                    SS[i] = "-1";
-                if (SS[i] == "10")
-                    SS[i] = "1";
-                if (SS[i] == "11")
-                    SS[i] = "2";
+
+                switch (SS[i])
+                {
+                    case "00":
+                        SS[i] = "-2";
+                        break;
+                    case "01":
+                        SS[i] = "-1";
+                        break;
+                    case "10":
+                        SS[i] = "1";
+                        break;
+                    case "11":
+                        SS[i] = "2";
+                        break;
+                }
             }
 
             int[] intArray = new int[SS.Length];

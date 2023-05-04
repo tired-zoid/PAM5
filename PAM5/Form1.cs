@@ -16,9 +16,7 @@ namespace PAM5
         public Form1()
         {
             InitializeComponent();
-             textBox2.Visible = false;
-            //  chart1.Visible = false;
-
+            textBox2.Visible = false;
         }
 
 
@@ -38,12 +36,6 @@ namespace PAM5
                 string S1 = code.Substring(i, 2);
                 SS[k++] = S1;
             }
-
-            //for (i = 0; i < SS.Length; i++)
-            //{
-            //    textBox2.Text += SS[i] + " ";
-            //}
-
 
             SS = SS.Where(q => q != null).ToArray();
 
@@ -119,7 +111,6 @@ namespace PAM5
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
             string SS = textBox1.Text;
             string[] W = SS.Split(' ');
 
@@ -131,42 +122,36 @@ namespace PAM5
             }
 
             
-                Array.Resize(ref intArray, intArray.Length + 1);
-                int dob = 0;
-                dob = intArray[intArray.Length - 2];
-                intArray[intArray.Length - 1] = dob;
+            Array.Resize(ref intArray, intArray.Length + 1);
+            int dob = intArray[intArray.Length - 2];
+            intArray[intArray.Length - 1] = dob;
             
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                textBox2.Text += intArray[i] + " ";
+            }
+            
+            int[] x = new int[intArray.Length];
+            for (int i = 0; i < x.Length; i++)
+            {
+                x[i] = i;
+            }
 
-
-                for (int i = 0; i < intArray.Length; i++)
-                {
-                    textBox2.Text += intArray[i] + " ";
-                }
-                int[] x = new int[intArray.Length];
-                for (int i = 0; i < x.Length; i++)
-                {
-                    x[i] = i;
-                }
-                chart1.ChartAreas[0].AxisX.Maximum = x.Length - 1;
-                chart2.Series["Series1"].Points.DataBindXY(x, intArray);
-                chart2.Series[0].BorderWidth = 3;
-                chart2.Series[0].Color = Color.Black;
-      
-
-
-
+            chart1.ChartAreas[0].AxisX.Maximum = x.Length - 1;
+            chart2.Series["Series1"].Points.DataBindXY(x, intArray);
+            chart2.Series[0].BorderWidth = 3;
+            chart2.Series[0].Color = Color.Black;
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-            {
-                if (e.KeyChar == '0' || e.KeyChar == '1' || e.KeyChar == (char)Keys.Back)
-
-                    e.Handled = false;
-                else
-                    e.Handled = true;
-            }
+        {
+            if (e.KeyChar == '0' || e.KeyChar == '1' || e.KeyChar == (char)Keys.Back)
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
     }
+}
 
 
 
